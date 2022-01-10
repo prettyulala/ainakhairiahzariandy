@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>EXPERIENCE</title>
+	<style type="text/css">
+			body { background: palevioletred;
+				color: black;
+
+			}
+		</style>
+		<body><script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.js"></script>
+    <script>
+        function snow() {
+            //1, define a snowflake template
+            var flake = $("<div>").css({
+                "position": "absolute",
+                "color": "#fff"
+            }).html("❄️");
+ 
+            //Get the width of the page, use this number to calculate, the value of left when the snowflake starts
+            var documentWidth = $(document).width();
+ 
+            //Get the height of the page, which is equivalent to the position of the Y axis when the snowflakes fall
+            var documentHieght = $(document).height();
+ 
+            //Define the number of milliseconds to generate a snowflake
+            var millisec = 100;
+            //2, set the first timer, a periodic timer, and generate a snowflake every time (millisec);
+            setInterval(function() {
+                //Randomly generate the value of left at the beginning of the snowflake falling, which is equivalent to the position of the X axis at the beginning
+                var startLeft = Math.random() * documentWidth;
+ 
+                //Randomly generate the value of left at the end of snowflake falling, which is equivalent to the position of the X axis at the end
+                var endLeft = Math.random() * documentWidth;
+ 
+                // Randomly generate snowflake size
+                var flakeSize = 5 + 20 * Math.random();
+ 
+                //Randomly generate the falling duration of snowflakes
+                var durationTime = 4000 + 7000 * Math.random();
+ 
+                //Randomly generate the transparency at the beginning of falling snowflakes
+                var startOpacity = 0.7 + 0.3 * Math.random();
+ 
+                //Randomly generate the transparency at the end of falling snowflakes
+                var endOpacity = 0.2 + 0.2 * Math.random();
+ 
+                //3. Clone a snowflake template, define the initial style of the snowflake, and stitch it into the page
+                flake.clone().appendTo($("body")).css({
+                    "left": startLeft,
+                    "opacity": startOpacity,
+                    "font-size": flakeSize,
+                    "top": "-25px",
+                }).animate({ //Execute animation
+                    "left": endLeft,
+                    "opacity": endOpacity,
+                    "top": documentHieght
+                }, durationTime, function() {
+                    //4. When the snowflake falls, delete the snowflake.
+                    $(this).remove(); 
+                });
+            }, millisec);
+        };
+        snow();
+    </script>
+  </div>
+</head>
+<body>
+	 <div class="w3-content w3-justify w3-text-black w3-padding-64" id="experience">
+<h1><b><u>EXPERIENCE</u></b></h1>
+<hr style="width: 150px" class="w3-opacity">
+<p align="w3-justify">I have some experience in cocuriculum when i studied in school and university back then. This helps me to communicate and give fully co-operation in a group. So then we can cooperate well as a team.</p>
+<head>
+<br>
+<style>
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: center;
+  padding: 5px;
+  background-color: yellowgreen;
+}
+
+tr:nth-child(even)
+</style>
+</head>
+<body>
+
+<table>
+  <tr>
+    <th>Name of Program</th>
+    <th>Years</th>
+    <th>Place</th>
+  </tr>
+  <tr>
+    <td>Pengawas Pusat Sumber Sekolah</td>
+    <td>2011-2013</td>
+    <td>Sekolah Kebangsaan Paloh Pintu Geng</td>
+  </tr>
+  <tr>
+    <td>Wakil Pertandingan Bola Jaring Peringkat Sekolah </td>
+    <td>2013</td>
+    <td>Sekolah Kebangsaan Paloh Pintu Geng</td>
+  </tr>
+  <tr>
+    <td>Pembimbing Rakan Sebaya(PRS)</td>
+    <td>2015-2018</td>
+    <td>Sekolah Menengah Ugama Maahad Muhammadi Pasir Pekan</td>
+  </tr>
+  <tr>
+    <td>Tempat Kedua 4x200</td>
+    <td>2017</td>
+    <td>Sekolah Menengah Ugama Maahad Muhammadi Pasir Pekan</td>
+  </tr>
+  <tr>
+    <td>Wakil Pertandingan Badminton Peringkat Sekolah</td>
+    <td>2016-2018</td>
+    <td>Sekolah Menengah Ugama Maahad Muhammadi Pasir Pekan</td>
+  </tr>
+  <tr>
+    <td>Wakil Pertandingan Futsal Perempuan</td>
+    <td>2019</td>
+    <td>Universiti Technology Mara UiTM Machang</td>
+</table>
+
+</body>
+</html>

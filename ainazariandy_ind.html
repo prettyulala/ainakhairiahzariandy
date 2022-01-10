@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html>
+<div class="w3-container" style="margin-top:11px" id="showcase">
+  	<h1><font color="black">
+  		<marquee behavior="alternate" bgcolor="deeppink">:: WELCOME TO MY PERSONAL WEBSITE ::</marquee></font></h1>
+<title>Nur Aina Khairiah Binti Zariandy Webpage</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body, h1,h2,h3,h4,h5,h6 {font-family: "Footlight MT light", sans-serif}
+.w3-row-padding img {margin-bottom: 12px}
+.w3-sidebar {width: 120px;background: #222;}
+#main {margin-left: 120px}
+
+@media only screen and (width: 500px) {#main {margin-left: 0}}
+</style>
+<body><body background="background image.jpg">
+<body><script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.js"></script>
+    <script>
+        function snow() {
+            //1, define a snowflake template
+            var flake = $("<div>").css({
+                "position": "absolute",
+                "color": "#fff"
+            }).html("❄️");
+ 
+            //Get the width of the page, use this number to calculate, the value of left when the snowflake starts
+            var documentWidth = $(document).width();
+ 
+            //Get the height of the page, which is equivalent to the position of the Y axis when the snowflakes fall
+            var documentHieght = $(document).height();
+ 
+            //Define the number of milliseconds to generate a snowflake
+            var millisec = 100;
+            //2, set the first timer, a periodic timer, and generate a snowflake every time (millisec);
+            setInterval(function() {
+                //Randomly generate the value of left at the beginning of the snowflake falling, which is equivalent to the position of the X axis at the beginning
+                var startLeft = Math.random() * documentWidth;
+ 
+                //Randomly generate the value of left at the end of snowflake falling, which is equivalent to the position of the X axis at the end
+                var endLeft = Math.random() * documentWidth;
+ 
+                // Randomly generate snowflake size
+                var flakeSize = 5 + 20 * Math.random();
+ 
+                //Randomly generate the falling duration of snowflakes
+                var durationTime = 4000 + 7000 * Math.random();
+ 
+                //Randomly generate the transparency at the beginning of falling snowflakes
+                var startOpacity = 0.7 + 0.3 * Math.random();
+ 
+                //Randomly generate the transparency at the end of falling snowflakes
+                var endOpacity = 0.2 + 0.2 * Math.random();
+ 
+                //3. Clone a snowflake template, define the initial style of the snowflake, and stitch it into the page
+                flake.clone().appendTo($("body")).css({
+                    "left": startLeft,
+                    "opacity": startOpacity,
+                    "font-size": flakeSize,
+                    "top": "-25px",
+                }).animate({ //Execute animation
+                    "left": endLeft,
+                    "opacity": endOpacity,
+                    "top": documentHieght
+                }, durationTime, function() {
+                    //4. When the snowflake falls, delete the snowflake.
+                    $(this).remove(); 
+                });
+            }, millisec);
+        };
+        snow();
+    </script>
+	
+
+
+<nav class="w3-sidebar w3-black w3-bar-block w3-small w3-hide-small w3-center">
+   <a href="#home" class="w3-bar-item w3-button w3-padding-large w3-hover-white">
+  <p>HOME</p>
+
+  <a href="#personal" class="w3-bar-item w3-button w3-padding-large w3-hover-white">
+  <p>PERSONAL</p>
+  </a>
+
+  <a href="#education" class="w3-bar-item w3-button w3-padding-large w3-hover-white">
+  <p>EDUCATION</p>
+  </a>
+  <a href="#skills" class="w3-bar-item w3-button w3-padding-large w3-hover-white">
+  <p>SKILLS</p>
+  </a>
+
+  <a href="#experience" class="w3-bar-item w3-button w3-padding-large w3-hover-white">
+  <p>EXPERIENCE</p>
+
+  <a href="#affiliation" class="w3-bar-item w3-button w3-padding-large w3-hover-white">
+  <p>AFFILIATION</p>
+
+  <a href="#hobbies" class="w3-bar-item w3-button w3-padding-large w3-hover-white">
+  <p>HOBBIES</p>
+
+  </a><a href="#family" class="w3-bar-item w3-button w3-padding-large w3-hover-white">
+  <p>FAMILY</p>
+
+  <a href="#references" class="w3-bar-item w3-button w3-padding-large w3-hover-white">
+  <p>REFERENCES</p>
+
+  <a href="#contact" class="w3-bar-item w3-button w3-padding-large w3-hover-white">
+  <p>CONTACT</p>
+</nav>
+<div class="w3-top w3-hide-large w3-hide-medium" id="myNavbar">
+  <div class="w3-bar w3-black w3-opacity w3-hover-opacity-off w3-center w3-small">
+
+     <a href="#home" class="w3-bar-item w3-button" style="width:20% !important">HOME</a>
+
+    <a href="#personal" class="w3-bar-item w3-button" style="width:20% !important">PERSONAL</a>
+
+    <a href="#education" class="w3-bar-item w3-button" style="width:20% !important">EDUCATION</a>
+
+    <a href="#skills" class="w3-bar-item w3-button" style="width:20% !important">SKILLS</a>
+
+    <a href="#experience" class="w3-bar-item w3-button" style="width:20% !important">EXPERIENCES</a>
+
+    <a href="#affiliation" class="w3-bar-item w3-button" style="width:20% !important">AFFILIATION</a>
+
+    <a href="#hobbies" class="w3-bar-item w3-button" style="width:20% !important">HOBBIES</a>
+
+    <a href="#family" class="w3-bar-item w3-button" style="width:20% !important">FAMILY</a>
+
+    <a href="#references" class="w3-bar-item w3-button" style="width:20% !important">REFERENCES</a>
+
+    <a href="#contact" class="w3-bar-item w3-button" style="width:20% !important">CONTACT</a>
+
+  </div>
+</div>
+
+<div class="w3-padding-large" id="main">
+  <header class="w3-container w3-padding-32 w3-center w3-black" id="home">
+    <h1 class="w3-jumbo"><span class="w3-hide-small">Nur Aina Khairiah Binti Zariandy</h1>
+    <p>Student of UiTM Machang</p>
+    <img src="aina.jpg" width="200" height="250">
+    <p>E-mail: nurainakhairiah@gmail.com<br>
+    Phone: 017-9723525</p>
+    <br>Address: Lot 1783, Jalan Kuala Krai <br>Batu 3 Kampung Tok Jaafar,
+    15100 Kota Bharu, Kelantan. </p></font>
+  </header>
+
+  <div class="w3-content w3-justify w3-text-black w3-padding-64" id="personal">
+<h1><b><u>MYSELF</u></b></h1>
+<hr style="width:150px" class="w3-opacity">
+
+<p align="justify">I am Nur Aina Khairiah Binti Zariandy. I am 20 years old. Currently, i am a student at UiTM  Kampus Machang, Kelantan, in the last semester this year. I am pursuing a diploma in Information Management. I am a self-motivated and responsible person, friendly, helpful and polite and also have a good sense of humour. I am able to work independently in busy enviroments and also within a team setting. And i like to work in group with other person because from there i can add some of new friends. I love to have a lot of friends.</p>
+<p align="justify">I also can have a good communication with others. This is because i like to talk and change opinions with the others. Usually, i like to talk about experience and the current issue with the people. I am an outgoing person with a good sense of humor and I make friends easily. My friends say that I am funny and fun to be with. I sometimes go out of my way to be nice to people and help them out. I guess this is rooted in my sense of responsibility which was honed into me by my parents considering that I am the first born of my family. Friendship and family mean a lot to me. I can go all out for my friends and my family and they know it. I think this is why I have had the same set of friends for years. We have transitioned from friends to family.
+<p align="justify">I’m always looking for ways to develop my skills and learn new things not just in my course that i had learn but also outside the university environment. I share ideas with my friends, we learn interesting things about one another, and most of the people I associate with I met with while on the lookout for ways to advance my skills.</p>
+
+
+
+<div class="w3-content w3-justify w3-text-black w3-padding-64" id="education">
+<h1><b><u>EDUCATION</u></b></h1>
+<p align="justify">My early education, primary school and secondary school are all Kelantan. The table below shows the names of the schools and institutions I have studied.</p>
+<head>
+<style>
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: center;
+  padding: 5px;
+}
+
+tr:nth-child(even) {
+  background-color: powderblue;
+}
+</style>
+</head>
+<body>
+
+<table>
+  <tr>
+    <table>
+  <tr>
+    <th>Name of School</th>
+    <th>Years</th>
+    <th>Place</th>
+    <th>Level of Education<th>
+  </tr>
+  <tr>
+    <td>Tabika KEMAS Taman Guru</td>
+    <td>2007</td>
+    <td>Kota Bharu</td>
+    <td>Pre-school<td>
+  </tr>
+  <tr>
+    <td>Sekolah Kebangsaan Paloh Pintu Geng</td>
+    <td>2008-2013</td>
+    <td>Kota Bharu</td>
+    <td>UPSR<td>
+  </tr>
+  <tr>
+    <td>sekolah Menengah Ugama Maahad Muhammadi Pasir Pekan</td>
+    <td>2014-2018</td>
+    <td>Tumpat</td>
+    <td>PT3 & SPM<td>
+  </tr>
+  <tr>
+    <td>Universiti Teknologi Mara Machang</td>
+    <td>2019-present</td>
+    <td>Kelantan</td>
+    <td>Diploma in Information Management<td>
+  </tr>
+</table>
+<br>
+
+<div class="w3-content w3-justify w3-text-black w3-padding-64" id="skills">
+<h1><b><u>SKILLS</u></b></h1>
+<p align="justify">I have some skills. Some of my skills i get it from my surronding observations. It also need a good efforts to maintain the skils. The horizontal bar chart below shows the skills that I have.</p>
+
+    <p><div class="w3-content w3-justify w3-text-black w3-padding-64" id="skills">
+ <p class="w3-wide">Music</p>
+    <div class="w3-white">
+      <div class="w3-black" style="height:28px;width:50%"></div>
+    </div>
+    <p class="w3-wide">House Chores</p>
+    <div class="w3-white">
+      <div class="w3-black" style="height:28px;
+        width:99%"></div><p>
+    </div>
+    <p class="w3-wide">Sports</p>
+    <div class="w3-white">
+      <div class="w3-black" style="height:28px;
+        width:45%"></div><p>
+    </div>
+    <p class="w3-wide">Computer</p>
+    <div class="w3-white">
+      <div class="w3-black" style="height:28px;
+        width:40%"/div></p>
+    </div>
+	</div>
+    <p class="w3-wide">Arts</p>
+    <div class="w3-white">
+      <div class="w3-black" style="height:28px;
+        width:20%"/div></p>
+        <div>
+
+
+  <div class="w3-content w3-justify w3-text-black w3-padding-64" id="experience">
+<h1><b><u>EXPERIENCE</u></b></h1>
+<hr style="width: 150px" class="w3-opacity">
+<p align="w3-justify">I have some experience in cocuriculum when i studied in school and university back then. This helps me to communicate and give fully co-operation in a group. So then we can cooperate well as a team.</p>
+<head>
+<br>
+<style>
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: center;
+  padding: 5px;
+}
+
+tr:nth-child(even) {
+  background-color: powderblue;
+}
+
+</style>
+</head>
+<body>
+
+<table>
+  <tr>
+    <th>Name of Program</th>
+    <th>Years</th>
+    <th>Place</th>
+  </tr>
+  <tr>
+    <td>Pengawas Pusat Sumber Sekolah</td>
+    <td>2011-2013</td>
+    <td>Sekolah Kebangsaan Paloh Pintu Geng</td>
+  </tr>
+  <tr>
+    <td>Wakil Pertandingan Bola Jaring Peringkat Sekolah </td>
+    <td>2013</td>
+    <td>Sekolah Kebangsaan Paloh Pintu Geng</td>
+  </tr>
+  <tr>
+    <td>Pembimbing Rakan Sebaya(PRS)</td>
+    <td>2015-2018</td>
+    <td>Sekolah Menengah Ugama Maahad Muhammadi Pasir Pekan</td>
+  </tr>
+  <tr>
+    <td>Tempat Kedua 4x200</td>
+    <td>2017</td>
+    <td>Sekolah Menengah Ugama Maahad Muhammadi Pasir Pekan</td>
+  </tr>
+  <tr>
+    <td>Wakil Pertandingan Badminton Peringkat Sekolah</td>
+    <td>2016-2018</td>
+    <td>Sekolah Menengah Ugama Maahad Muhammadi Pasir Pekan</td>
+  </tr>
+  <tr>
+    <td>Wakil Pertandingan Futsal Perempuan</td>
+    <td>2019</td>
+    <td>Universiti Technology Mara UiTM Machang</td>
+</table>
+
+<div class="w3-content w3-justify w3-text-black w3-padding-64" id="affiliation">
+  <h1><b><u>AFFILIATION</u></b></h1>
+<p align="justify">I have been involved in some of uniformed body and started active in school.</p>
+<style>
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: center;
+  padding: 5px;
+}
+
+tr:nth-child(even) {
+  background-color: powderblue;
+}
+</style>
+</head>
+<body>
+
+<table>
+  <tr>
+    <th>Team</th>
+    <th>Postion</th>
+    <th>Place</th>
+    <th>Year<th>
+  </tr>
+  <tr>
+    <td>Persatuan Puteri Islam</td>
+    <td>Pengerusi</td>
+    <td>Tumpat</td>
+    <td>2015<td>
+  </tr>
+  <tr>
+    <td>Kelab Mathematics & Science</td>
+    <td>Active Member</td>
+    <td>Tumpat</td>
+    <td>2015<td>
+  </tr>
+  <tr>
+    <td>Persatuan Seni Bela Diri Silat</td>
+    <td>Active member</td>
+    <td>Tumpat</td>
+    <td>2016<td>
+  </tr>
+  <tr>
+    <td>Persatuan Bulan Sabit Merah</td>
+    <td>Active Member</td>
+    <td>Tumpat</td>
+    <td>2017<td>
+  </tr>
+  <tr>
+    <td>Kelab Badminton</td>
+    <td>Active member</td>
+    <td>Tumpat</td>
+    <td>2018</td>
+  </tr>
+</table>
+<br>
+
+<div class="w3-content w3-justify w3-text-black w3-padding-64" id="hobbies"> 
+  <h1><b><u>HOBBIES</u></b></h1> 
+<p align="justify">My hobby are watching movies and listening to music. I like to watch horror and action movies. I'm also can watch any kinds of movies in my free time. I'm listening to music everyday especially while i'm doing my works so that i won't be sleepy. I hope i can add up some of the other hobby later.</p> 
+<p align="center"><iframe width="700" height="394" src="https://www.youtube.com/embed/_L6Hs7RV_Ws" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<div class="w3-content w3-justify w3-text-black w3-padding-64" id="family">
+<h1><b><u>FAMILY</u></b></h1>
+<p>I have five family members including my father, my mother and my siblings. My mother's name is Hakimah Binti Yashin. She is 44 years old. My mother is a housewife. My father's name is Zariandy Bin Adnan @ Nasir. He is 44 years old. He is working as a village workers. I have three siblings including me. My siblings name are Nur Nazifa Amani Binti Zariandy (15) and Nur Anis Zakirah Binti Zariandy (6). All my siblings are still in school except for me. My family and I are really close to each others. We will helps each others if we have problems. We will sit together and talk about what we want to express to them. Since I am the oldest, I need to take care of my siblings and listen to what they want to share with me. I love my family so much. I hope they will always happy and hoping the best for them in life.</p>
+
+
+<div class="w3-content w3-justify w3-text-black w3-padding-64" id="references">
+<h1><b><u>REFERENCES</u></b></h1>
+
+<p>= Miss Ainatul Mardhiah Binti Mat Nawi
+  <br>= Senior Lecturer
+  <br>= Faculty of Information Management
+  <br>= Universiti Teknologi Mara (UiTM)
+  <br> Machang, Kelantan.<br>
+
+</p>
+<p align="justify">=Email:ainatulmardiah@uitm.edu.my</p>
+
+</body>
+</html>

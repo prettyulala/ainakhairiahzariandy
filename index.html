@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<div class="w3-container" style="margin-top:11px" id="showcase">
+  	<h1><font color="w3-text-black">
+  		<marquee behavior="alternate" bgcolor="deeppink">:: WELCOME TO MY PERSONAL WEBSITE ::</marquee></font></h1>
+<title>Nur Aina Khairiah Binti Zariandy Webpage</title>
+  <style type="text/css">
+      body { background: lightpink;
+        color: black;
+
+      }
+    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body, h1,h2,h3,h4,h5,h6 {font-family: "Footlight MT light", sans-serif}
+.w3-row-padding img {margin-bottom: 12px}
+.w3-sidebar {width: 120px;background: #222;}
+#main {margin-left: 120px}
+
+@media only screen and (width: 500px) {#main {margin-left: 0}}
+
+</style>
+<body><script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.js"></script>
+    <script>
+        function snow() {
+            //1, define a snowflake template
+            var flake = $("<div>").css({
+                "position": "absolute",
+                "color": "#fff"
+            }).html("❄️");
+ 
+            //Get the width of the page, use this number to calculate, the value of left when the snowflake starts
+            var documentWidth = $(document).width();
+ 
+            //Get the height of the page, which is equivalent to the position of the Y axis when the snowflakes fall
+            var documentHieght = $(document).height();
+ 
+            //Define the number of milliseconds to generate a snowflake
+            var millisec = 100;
+            //2, set the first timer, a periodic timer, and generate a snowflake every time (millisec);
+            setInterval(function() {
+                //Randomly generate the value of left at the beginning of the snowflake falling, which is equivalent to the position of the X axis at the beginning
+                var startLeft = Math.random() * documentWidth;
+ 
+                //Randomly generate the value of left at the end of snowflake falling, which is equivalent to the position of the X axis at the end
+                var endLeft = Math.random() * documentWidth;
+ 
+                // Randomly generate snowflake size
+                var flakeSize = 5 + 20 * Math.random();
+ 
+                //Randomly generate the falling duration of snowflakes
+                var durationTime = 4000 + 7000 * Math.random();
+ 
+                //Randomly generate the transparency at the beginning of falling snowflakes
+                var startOpacity = 0.7 + 0.3 * Math.random();
+ 
+                //Randomly generate the transparency at the end of falling snowflakes
+                var endOpacity = 0.2 + 0.2 * Math.random();
+ 
+                //3. Clone a snowflake template, define the initial style of the snowflake, and stitch it into the page
+                flake.clone().appendTo($("body")).css({
+                    "left": startLeft,
+                    "opacity": startOpacity,
+                    "font-size": flakeSize,
+                    "top": "-25px",
+                }).animate({ //Execute animation
+                    "left": endLeft,
+                    "opacity": endOpacity,
+                    "top": documentHieght
+                }, durationTime, function() {
+                    //4. When the snowflake falls, delete the snowflake.
+                    $(this).remove(); 
+                });
+            }, millisec);
+        };
+        snow();
+    </script>
+  </div>
+
+<header>
+  <div class="w3-container" style="font-size: 20px;" align="center">
+    <h1><a href="index.html"><i>MY PERSONAL WEBSITE</i></a></h1>
+    <ul>
+      <li><a href="Myself.html"><b>MYSELF</b></a></li>
+      <li><a href="education.html"><b>EDUCATION</b></a></li>
+      <li><a href="Skills.html"><b>SKILLS</b></a></li>
+      <li><a href="Experience.html"><b>EXPERIENCES</b></a></li>
+      <li><a href="Affiliation.html"><b>AFFILIATION</b></a></li>
+      <li><a href="hobby.html"><b>HOBBY</b></a></li>
+      <li><a href="family.html"><b>FAMILY</b></a></li>
+      <li><a href="gallery.html"><b>GALLERY</b></a></li>
+      <li><a href="Reference.html"><b>REFERENCE</b></a></li>
+      <li><a href="thank you.html"><b>THANK YOU</b></a></li>
+
+    </ul>
+</header>
+  </div>
+
+<div class="w3-padding-large" id="main">
+  <header class="w3-container w3-padding-32 w3-center w3-text-black" id="home" style="background-image: url('background image.jpg');">
+    <h1 class="w3-jumbo"><span class="w3-hide-small">NUR AINA KHAIRIAH BINTI ZARIANDY</h1>
+    <p>STUDENT OF UiTM MACHANG</p>
+    <img src="aina.jpg" width="200" height="250">
+    <p>E-mail: nurainakhairiah@gmail.com<br>
+    Phone: 017-9723525</p>
+    <br>Address: Lot 1783, Jalan Kuala Krai <br>Batu 3 Kampung Tok Jaafar,
+    15100 Kota Bharu, Kelantan. </p></font>
+  </header>
+  </div>
+
+</body>
+</html>

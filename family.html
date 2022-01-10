@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>FAMILY</title>
+	<style type="text/css">
+			body { background: palevioletred;
+				color: black;
+
+			}
+		</style>
+		<body><script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.js"></script>
+    <script>
+        function snow() {
+            //1, define a snowflake template
+            var flake = $("<div>").css({
+                "position": "absolute",
+                "color": "#fff"
+            }).html("❄️");
+ 
+            //Get the width of the page, use this number to calculate, the value of left when the snowflake starts
+            var documentWidth = $(document).width();
+ 
+            //Get the height of the page, which is equivalent to the position of the Y axis when the snowflakes fall
+            var documentHieght = $(document).height();
+ 
+            //Define the number of milliseconds to generate a snowflake
+            var millisec = 100;
+            //2, set the first timer, a periodic timer, and generate a snowflake every time (millisec);
+            setInterval(function() {
+                //Randomly generate the value of left at the beginning of the snowflake falling, which is equivalent to the position of the X axis at the beginning
+                var startLeft = Math.random() * documentWidth;
+ 
+                //Randomly generate the value of left at the end of snowflake falling, which is equivalent to the position of the X axis at the end
+                var endLeft = Math.random() * documentWidth;
+ 
+                // Randomly generate snowflake size
+                var flakeSize = 5 + 20 * Math.random();
+ 
+                //Randomly generate the falling duration of snowflakes
+                var durationTime = 4000 + 7000 * Math.random();
+ 
+                //Randomly generate the transparency at the beginning of falling snowflakes
+                var startOpacity = 0.7 + 0.3 * Math.random();
+ 
+                //Randomly generate the transparency at the end of falling snowflakes
+                var endOpacity = 0.2 + 0.2 * Math.random();
+ 
+                //3. Clone a snowflake template, define the initial style of the snowflake, and stitch it into the page
+                flake.clone().appendTo($("body")).css({
+                    "left": startLeft,
+                    "opacity": startOpacity,
+                    "font-size": flakeSize,
+                    "top": "-25px",
+                }).animate({ //Execute animation
+                    "left": endLeft,
+                    "opacity": endOpacity,
+                    "top": documentHieght
+                }, durationTime, function() {
+                    //4. When the snowflake falls, delete the snowflake.
+                    $(this).remove(); 
+                });
+            }, millisec);
+        };
+        snow();
+    </script>
+  </div>
+</head>
+<body>
+	<div class="w3-content w3-justify w3-text-black w3-padding-64" id="family">
+<h1><b><u>FAMILY</u></b></h1>
+<p>I have five family members including my father, my mother and my siblings. My mother's name is Hakimah Binti Yashin. She is 44 years old. My mother is a housewife. My father's name is Zariandy Bin Adnan @ Nasir. He is 44 years old. He is working as a village workers. I have three siblings including me. My siblings name are Nur Nazifa Amani Binti Zariandy (15) and Nur Anis Zakirah Binti Zariandy (6). All my siblings are still in school except for me. My family and I are really close to each others. We will helps each others if we have problems. We will sit together and talk about what we want to express to them. Since I am the oldest, I need to take care of my siblings and listen to what they want to share with me. I love my family so much. I hope they will always happy and hoping the best for them in life.</p>
+    <img src="myfamily.jpg" align="center" border="5" width="550" height="450">
+
+
+</body>
+</html>
